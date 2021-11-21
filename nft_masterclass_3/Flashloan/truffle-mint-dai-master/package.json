@@ -1,0 +1,28 @@
+{
+  "name": "truffle-mint-dai",
+  "version": "1.0.1",
+  "description": "Demo repo to show how to acquire your own forked mainnet DAI",
+  "scripts": {
+    "ganache": "ganache-cli --fork $ETHEREUM_NODE --port 8545 --unlock 0x6b175474e89094c44da98b954eedeac495271d0f --unlock $USER_ADDRESS",
+    "build": "truffle build",
+    "migrate": "truffle migrate",
+    "test": "truffle test",
+    "getAddress": "node getAddress.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanio/truffle-mint-dai.git"
+  },
+  "author": "Ryan Ghods <ryan@ryanio.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanio/truffle-mint-dai/issues"
+  },
+  "homepage": "https://github.com/ryanio/truffle-mint-dai",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "chai": "^4.3.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.1.64"
+  }
+}

@@ -1,0 +1,29 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+    types: [opened, reopened, synchronize]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ETHEREUM_NODE: ${{ secrets.ETHEREUM_NODE }}
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/checkout@v2
+
+      - run: yarn
+      - run: echo "USER_ADDRESS=$(yarn --silent getAddress)" >> $GITHUB_ENV
+      - run: yarn ganache & yarn test
