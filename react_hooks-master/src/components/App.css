@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@400;700&display=swap');
+
+/* Styles go here */
+:root {
+    --clr-dark: #212529;
+    --clr-light: #D2F5FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Rubik" !important;
+    font-weight: 400;
+}
+
+body {
+    background: var(--clr-light);
+
+    min-height: 100vh;
+
+    font-family: "Rubik";
+}
+
+main {
+    min-height: 100vh;
+    margin-top: 5vh;
+}
+
+.content {
+    justify-content: center;
+}
+
+.number {
+    font-size: 5em;
+}
+
+.user-controls {
+    display: grid;
+    place-content: center;
+    justify-content: center;
+
+    max-width: 400px;
+}
+
+form {
+    margin: 2em;
+}
+
+button {
+    min-width: 150px;
+
+    margin: .5em auto;
+    padding: 1em 2em;
+
+    background: var(--clr-dark);
+    color: var(--clr-light);
+
+    border: 3px solid var(--clr-dark);
+    border-radius: .5em;
+
+    font-weight: 700 !important;
+
+    transition: all 250ms ease;
+}
+
+input[type="number"] {
+    margin: .5em auto;
+    padding: 1em 2em;
+}
+
+button:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.App-logo {
+    max-width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
