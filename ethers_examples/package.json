@@ -1,0 +1,12 @@
+{
+  "name": "ethers-examples",
+  "version": "1.0.0",
+  "description": "How to use Ethers.js with Dapp Univeristy",
+  "main": "app.js",
+  "author": "gregory@dappuniversity.com",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ethers": "^5.0.5"
+  }
+}
